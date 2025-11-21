@@ -24,57 +24,67 @@
   font-style: normal;
   font-display: swap;
 }
+
 /* INTER FONT — OFFLINE — END */
 
 /* SET DEFAULT FONT */
-html, body {
+html,
+body {
   font-family: "Inter", sans-serif;
 }
 
 /* CUSTOM UTILITIES */
 @layer utilities {
 
-    /* SMOOTH MORPHING GRADIENT */
-    .gradient-bg {
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-        background: linear-gradient(-45deg,
-                #0a1224,
-                #0f1c37,
-                #12284c,
-                #1b3b63,
-                #0e1b33);
-        background-size: 400% 400%;
-        animation: gradientAnimation 20s ease infinite;
-        will-change: background-position;
+  /* SMOOTH MORPHING GRADIENT */
+  .gradient-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(-45deg,
+        #0a0f24,
+        #162447,
+        #1f4068,
+        #1b7f8c,
+        #533483);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+    will-change: background-position;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
     }
 
-    @keyframes gradientAnimation {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
+    50% {
+      background-position: 100% 50%;
     }
 
-    /* NEON CURSOR GLOW */
-    .cursor-glow {
-        position: fixed;
-        pointer-events: none;
-        width: 170px;
-        height: 170px;
-        border-radius: 50%;
-        background: radial-gradient(circle,
-                rgba(255, 255, 255, 0.55),
-                rgba(0, 220, 255, 0.45) 25%,
-                rgba(0, 160, 255, 0.30) 50%,
-                rgba(0, 110, 200, 0.12) 70%,
-                transparent 85%);
-        filter: blur(110px);
-        mix-blend-mode: screen;
-        transform: translate(-50%, -50%);
-        opacity: 0.95;
-        transition: transform 0.08s ease-out;
-        z-index: 9999;
+    100% {
+      background-position: 0% 50%;
     }
+  }
+
+  /* NEON CURSOR GLOW */
+  .cursor-glow {
+    position: fixed;
+    pointer-events: none;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        rgba(255, 255, 255, 0.55),
+        rgba(0, 220, 255, 0.45) 25%,
+        rgba(0, 160, 255, 0.30) 50%,
+        rgba(0, 110, 200, 0.12) 70%,
+        transparent 85%);
+    filter: blur(110px);
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+    opacity: 0.95;
+    transition: transform 0.08s ease-out;
+    z-index: 9999;
+  }
 }

@@ -32,9 +32,9 @@ export default function Project() {
                     <h1 className="text-white text-4xl mb-6">Project!</h1>
                 </div>
                 <div className="flex flex-row text-white flex-wrap gap-4 justify-center mb-8">
-                    <BadgeIconText text={'Backend'} iconName={'fa-solid fa-server'} />
-                    <BadgeIconText text={'Web'} iconName={'fa-solid fa-laptop'} />
-                    <BadgeIconText text={'Mobile'} iconName={'fa-solid fa-mobile-screen'} />
+                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5'} text={'Backend'} iconName={'fa-solid fa-server'} />
+                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5'} text={'Web'} iconName={'fa-solid fa-laptop'} />
+                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5'} text={'Mobile'} iconName={'fa-solid fa-mobile-screen'} />
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-12">
                     <ProjectCard handleClickCard={openModal} />
