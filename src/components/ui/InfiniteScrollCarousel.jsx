@@ -1,3 +1,6 @@
+import { IconContext } from 'react-icons';
+import { CgLaptop } from 'react-icons/cg';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import styled from 'styled-components';
 
 export default function InfiniteScrollCarousel({ certificateList, isReverse }) {
@@ -22,15 +25,21 @@ export default function InfiniteScrollCarousel({ certificateList, isReverse }) {
             >
                 <div className="list">
                     {loopedCardData.map((card, index) => (
-                        
+
                         <a key={`${index}`} href={`${card.url}`} target='_blank'>
                             <div className="group item h-fit text-white border-y-white/20 border-y" style={{ width: sliderVars['--width'] }} >
 
                                 <div className="w-full h-56 text-white flex flex-col justify-center items-center text-sm pt-4 px-4 backdrop-blur-lg bg-white/10 shadow-xl cursor-pointer group-hover:bg-white/20">
 
                                     <img className='grow group-hover:scale-105 transition' src={`${card.linkImage}`} alt={`${card.text}`} />
-                                    <p className='my-2 flex items-center'>{card.text}&nbsp;<span className='opacity-0 transition-all duration-300 ease-in-out transform -translate-x-3 group-hover:inline-block group-hover:opacity-100 group-hover:translate-x-0'><i className="fa-solid fa-arrow-up-right-from-square text-xs"></i></span></p>
-
+                                    <p className='my-2 flex items-center'>
+                                        {card.text}&nbsp;<span
+                                            className='opacity-0 transition-all duration-300 ease-in-out transform -translate-x-3 group-hover:inline-block group-hover:opacity-100 group-hover:translate-x-0'>
+                                            <IconContext.Provider value={{ className: 'text-xs' }}>
+                                                <FaArrowUpRightFromSquare />
+                                            </IconContext.Provider>
+                                        </span>
+                                    </p>
                                 </div>
 
                             </div>

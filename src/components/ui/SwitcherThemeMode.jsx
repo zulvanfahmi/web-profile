@@ -1,44 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import { useEffectOnce } from 'react-use';
+import { useEffect} from 'react';
+import { useEffectOnce, useLocalStorage } from 'react-use';
 import styled from 'styled-components';
 
 export default function SwitcherThemeMode() {
 
-  const [isDark, setIsDark] = useState(true)
-  console.log(isDark)
+  const [theme, setTheme] = useLocalStorage('theme', '');
 
   useEffectOnce(() => {
-    const html = document.documentElement;
-    const storedTheme = localStorage.getItem('theme');
-
-    let initialDarkMode = true;
-    if (storedTheme !== null) {
-      initialDarkMode = storedTheme === 'dark';
-    }
-
-    setIsDark(initialDarkMode);
-
-    if (initialDarkMode) {
-      html.classList.remove('dark');
-    } else {
-      html.classList.add('dark');
+    if (theme === '') {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
     }
   });
 
   useEffect(() => {
-    const html = document.documentElement;
-
-    if (isDark) {
-      html.classList.remove('dark');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
     } else {
-      html.classList.add('dark');
+      document.documentElement.classList.remove('dark');
     }
-  }, [isDark]);
+  }, [theme]);
+
+  function handleChange() {
+    if (theme === 'dark') {
+      setTheme('light')
+    } else {
+      setTheme('dark')
+    }
+  }
 
   return (
     <StyledWrapper>
       <label className="switch">
-        <input id="input" type="checkbox" defaultChecked="darkTheme" onChange={() => setIsDark(!isDark)} />
+        <input id="input" type="checkbox" checked={theme==='dark' ? true : false} onChange={() => handleChange()}/>
         <div className="slider round">
           <div className="sun-moon">
             <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ProjectCard from "../components/ui/ProjectCard";
 import BadgeIconText from "../components/ui/BadgeIconText";
+import { FaLaptop, FaMobileAlt, FaServer } from "react-icons/fa";
 
 export default function Project() {
 
@@ -32,9 +33,9 @@ export default function Project() {
                     <h1 className="text-white text-4xl mb-6">Project!</h1>
                 </div>
                 <div className="flex flex-row text-white flex-wrap gap-4 justify-center mb-8">
-                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5'} text={'Backend'} iconName={'fa-solid fa-server'} />
-                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5'} text={'Web'} iconName={'fa-solid fa-laptop'} />
-                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5'} text={'Mobile'} iconName={'fa-solid fa-mobile-screen'} />
+                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5 dark:hover:bg-white/90'} text={'Backend'} iconComponent={<FaServer />} />
+                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5 dark:hover:bg-white/90'} text={'Web'} iconComponent={<FaLaptop />} />
+                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5 dark:hover:bg-white/90'} text={'Mobile'} iconComponent={<FaMobileAlt />} />
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-12">
                     <ProjectCard handleClickCard={openModal} />
@@ -65,8 +66,8 @@ export default function Project() {
 
                             <div className="flex flex-row flex-wrap gap-2 justify-center">
 
-                                <BadgeIconText text={'React JS'} iconName={'fa-brands fa-react'}/>
-                                <BadgeIconText text={'Java-Spring Boot'} iconName={'fa-brands fa-java'}/>
+                                <BadgeIconText text={'React JS'} iconName={'fa-brands fa-react'} />
+                                <BadgeIconText text={'Java-Spring Boot'} iconName={'fa-brands fa-java'} />
 
                             </div>
                         </div>

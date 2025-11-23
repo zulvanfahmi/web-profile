@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* INTER FONT — OFFLINE — START */
 @font-face {
   font-family: "Inter";
@@ -53,6 +55,32 @@ body {
     will-change: background-position;
   }
 
+  html.dark .gradient-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(-45deg,
+        #000000,
+        /* Hitam Murni (Paling Gelap) */
+        #121212,
+        /* Abu-abu Gelap Minimal */
+        #171717,
+        /* Abu-abu Gelap Sedikit Lebih Terang */
+        #333333,
+        /* Abu-abu Gelap Sedang (Paling Terang) */
+        #171717,
+        /* Abu-abu Gelap Sedikit Lebih Terang */
+        #121212,
+        /*Kembali ke Abu-abu Gelap Minimal*/
+        #000000
+        /* Hitam Murni */
+      );
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+    will-change: background-position;
+  }
+
   @keyframes gradientAnimation {
     0% {
       background-position: 0% 50%;
@@ -79,6 +107,28 @@ body {
         rgba(0, 220, 255, 0.45) 25%,
         rgba(0, 160, 255, 0.30) 50%,
         rgba(0, 110, 200, 0.12) 70%,
+        transparent 85%);
+    filter: blur(110px);
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+    opacity: 0.95;
+    transition: transform 0.08s ease-out;
+    z-index: 9999;
+  }
+
+  html.dark .cursor-glow {
+    position: fixed;
+    pointer-events: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        rgba(200, 200, 200, 0.50) 25%,
+        /* Abu-abu Sangat Terang */
+        rgba(150, 150, 150, 0.35) 50%,
+        /* Abu-abu Sedang */
+        rgba(100, 100, 100, 0.15) 70%,
+        /* Abu-abu Gelap (Hampir Transparan) */
         transparent 85%);
     filter: blur(110px);
     mix-blend-mode: screen;

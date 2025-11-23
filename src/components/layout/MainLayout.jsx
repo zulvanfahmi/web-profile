@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import Contact from '../../pages/Contact';
-import Header from '../../pages/Header';
 import Project from '../../pages/Project';
-import About from '../../pages/About';
+import NeonCursorGlow from "../animations/NeonCursorGlow"
+import { FaArrowUp } from 'react-icons/fa';
+import CertificatePage from '../../pages/CertificatePage';
+import WorkExperiencePage from '../../pages/WorkExperiencePage';
+import AboutMePage from '../../pages/AboutMePage';
 
 export default function MainLayout() {
 
@@ -27,7 +30,7 @@ export default function MainLayout() {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
 
-        return(() => {
+        return (() => {
             window.removeEventListener('scroll', handleScroll);
         })
     }, [])
@@ -36,10 +39,11 @@ export default function MainLayout() {
     return (
         <>
             <div className='lg:mx-24 sm:mx-4 flex flex-col'>
-                <Header/>
-                <About/>
-                <Project/>
-                <Contact/>
+                <AboutMePage />
+                <WorkExperiencePage />
+                <CertificatePage/>
+                <Project />
+                <Contact />
             </div>
             <div className='backdrop-blur-xl bg-white/10 shadow-2xl flex justify-center'>
                 <p className='py-4 text-sm text-white'>Made by me and myself @2025 with support from several other dev!</p>
@@ -47,10 +51,11 @@ export default function MainLayout() {
 
             <div className={`fixed bottom-5 right-5 ${visible ? '' : 'hidden'}`}>
                 <button onClick={scrollToTop} className='rounded-full backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl p-2 text-white text-xs cursor-pointer hover:scale-103 hover:bg-white/15 transition'>
-                    <i className="fa-solid fa-arrow-up"></i> Back to Top
+                    <span className='flex flex-row items-center'><FaArrowUp />&nbsp;Back to Top</span>
                 </button>
             </div>
+            <NeonCursorGlow />
         </>
-        
+
     );
 };

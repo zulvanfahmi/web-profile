@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import ButtonSendEmail from '../components/ui/ButtonSendEmail'
 import BadgeContactLogo from '../components/ui/BadgeContactLogo';
+import { FaGithub, FaLinkedin} from 'react-icons/fa';
+import { FaMedium } from "react-icons/fa6";
 
 export default function Contact() {
 
@@ -41,13 +43,13 @@ export default function Contact() {
 
                 </form>
                 <div className='flex-1 text-white mb-6'>
-                    
+
                     <h1 className='mb-4'>You can find me also in:</h1>
 
                     <div className='flex flex-row justify-center gap-4'>
-                        <BadgeContactLogo logoClassName={'fa-brands fa-square-linkedin'}/>
-                        <BadgeContactLogo logoClassName={'fa-brands fa-medium'}/>
-                        <BadgeContactLogo logoClassName={'fa-brands fa-github'}/>
+                        <BadgeContactLogo iconComponent={<FaLinkedin />} />
+                        <BadgeContactLogo iconComponent={<FaMedium />} />
+                        <BadgeContactLogo iconComponent={<FaGithub />} />
                     </div>
 
                 </div>

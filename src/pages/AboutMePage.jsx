@@ -2,15 +2,11 @@ import NavBarButton from "../components/ui/NavbarButton";
 import NeonLampFire from "../components/animations/NeonLampFire";
 import SwitcherThemeMode from "../components/ui/SwitcherThemeMode";
 import BadgeIconText from "../components/ui/BadgeIconText"
+import { keySkillListData } from "../data/Data";
 
-export default function Header() {
+export default function AboutMePage() {
 
-    const keySkillList = [
-        { text: 'Bootstrap', iconName: 'fa-brands fa-bootstrap' },
-        { text: 'Java', iconName: 'fa-brands fa-java' },
-        { text: 'Docker', iconName: 'fa-brands fa-docker' },
-        { text: 'Github', iconName: 'fa-brands fa-github' },
-    ];
+    const keySkillList = keySkillListData;
 
     return (
         <>
@@ -40,7 +36,7 @@ export default function Header() {
                             <p className="mb-2">Key Skills:</p>
                             <div className="flex flex-row flex-wrap gap-1 justify-center">
                                 {keySkillList.map((keySkill, index) => (
-                                    <BadgeIconText key={index} text={`${keySkill.text}`} iconName={`${keySkill.iconName}`} />
+                                    <BadgeIconText key={index} text={`${keySkill.text}`} iconComponent={keySkill.iconComponent} />
                                 ))}
                             </div>
                         </div>

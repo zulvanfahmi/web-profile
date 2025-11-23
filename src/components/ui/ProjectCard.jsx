@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BiLogoSpringBoot } from "react-icons/bi";
 import BadgeIconText from "./BadgeIconText";
-
+import { FaReact } from "react-icons/fa";
 
 export default function ProjectCard({ handleClickCard }) {
 
@@ -15,8 +15,8 @@ export default function ProjectCard({ handleClickCard }) {
 
                 <div className="flex flex-row flex-wrap gap-2 justify-center">
 
-                    <BadgeIconText text={'React JS'} iconName={'fa-brands fa-react'} />
-                    <BadgeIconText text={'Java-Spring Boot'} iconName={'fa-brands fa-java'} />
+                    <BadgeIconText text={'React JS'} iconComponent={<FaReact />} />
+                    <BadgeIconText text={'Java-Spring Boot'} iconComponent={<BiLogoSpringBoot />} />
 
                 </div>
             </div>
