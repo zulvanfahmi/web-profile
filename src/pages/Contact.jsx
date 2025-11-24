@@ -20,15 +20,15 @@ export default function Contact() {
 
     return (
         <>
-            <div className="flex flex-col items-center">
+            <div id='contactPage' className="flex flex-col items-center min-h-screen">
                 <h1 className='text-white text-4xl mt-16 mb-6'>Let's Connect!</h1>
 
                 <p className='text-white text-sm mb-6'>you can send me email to <a className='text-lg relative inline-block cursor-pointer hover:-translate-y-0.5 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-600 hover:after:scale-x-100' href="mailto:zulvanfahmi1612@gmail.com"> zulvanfahmi1612@gmail.com</a> or fill this form below</p>
 
-                <form className='flex flex-col mb-6 grow w-2/3'>
+                <form className='flex flex-col mb-4 grow w-2/3'>
                     <label className="text-white mb-1" htmlFor="contact-email-subject">Subject</label>
 
-                    <input className="backdrop-blur-xl bg-white/10 shadow-2xl outline-1 px-1 outline-white/30 mb-2 text-white rounded focus:outline-2"
+                    <input className="backdrop-blur-xl bg-white/10 shadow-2xl outline-1 px-1 outline-white/30 mb-4 text-white rounded focus:outline-2"
                         type="text"
                         id="contact-email-subject"
                         value={subject} onChange={(e) => setSubject(e.target.value)} />
@@ -42,7 +42,7 @@ export default function Contact() {
                     <a id='linkSendEmail' className='hidden' href={`mailto:zulvanfahmi1612@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`}></a>
 
                 </form>
-                <div className='flex-1 text-white mb-6'>
+                <div className='flex-1 text-white mb-2'>
 
                     <h1 className='mb-4'>You can find me also in:</h1>
 

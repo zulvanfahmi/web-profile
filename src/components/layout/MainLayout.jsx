@@ -41,15 +41,18 @@ export default function MainLayout() {
             <div className='lg:mx-24 sm:mx-4 flex flex-col'>
                 <AboutMePage />
                 <WorkExperiencePage />
+                <div className='mb-10'/>
                 <CertificatePage/>
+                <div className='mb-18'/>
                 <Project />
+                <div className='mb-18'/>
                 <Contact />
             </div>
             <div className='backdrop-blur-xl bg-white/10 shadow-2xl flex justify-center'>
                 <p className='py-4 text-sm text-white'>Made by me and myself @2025 with support from several other dev!</p>
             </div>
 
-            <div className={`fixed bottom-5 right-5 ${visible ? '' : 'hidden'}`}>
+            <div className={`fixed bottom-2.5 right-5 ${visible ? '' : 'hidden'}`}>
                 <button onClick={scrollToTop} className='rounded-full backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl p-2 text-white text-xs cursor-pointer hover:scale-103 hover:bg-white/15 transition'>
                     <span className='flex flex-row items-center'><FaArrowUp />&nbsp;Back to Top</span>
                 </button>

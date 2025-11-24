@@ -1,22 +1,23 @@
-import { BiLogoSpringBoot } from "react-icons/bi";
 import BadgeIconText from "./BadgeIconText";
-import { FaReact } from "react-icons/fa";
 
-export default function ProjectCard({ handleClickCard }) {
+export default function ProjectCard({ handleClickCard, title, imageLink, techStacks }) {
 
     return (
         <>
             <div
-                className="rounded-lg backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl p-4 text-white inline-flex flex-col w-fit cursor-pointer hover:scale-103 hover:bg-white/15 transition" onClick={handleClickCard}>
+                className="rounded-lg backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl p-4 text-white inline-flex flex-col w-76 cursor-pointer hover:scale-103 hover:bg-white/15 transition" onClick={handleClickCard}>
 
-                <img className="min-w-2xs rounded" src="/images/project/dummyimage.webp" alt="dummy image" />
+                <img className="w-full h-48 object-cover" src={imageLink} alt={`${title} image`} />
 
-                <h1 className="my-4">Lorem ipsum dolor sit amet.</h1>
+                <h1 className="my-3 text-lg">{title}</h1>
 
-                <div className="flex flex-row flex-wrap gap-2 justify-center">
+                <div className="flex flex-row flex-wrap gap-1 justify-center">
 
-                    <BadgeIconText text={'React JS'} iconComponent={<FaReact />} />
-                    <BadgeIconText text={'Java-Spring Boot'} iconComponent={<BiLogoSpringBoot />} />
+                    {
+                        techStacks.map((techStack, index) => (
+                            <BadgeIconText key={index} {...techStack} />
+                        ))
+                    }
 
                 </div>
             </div>

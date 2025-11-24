@@ -16,9 +16,10 @@ export default function AboutMePage() {
                         <NeonLampFire />
                     </div>
                     <div className="flex flex-row items-center gap-4">
-                        <NavBarButton text={'About'} />
-                        <NavBarButton text={'Project'} />
-                        <NavBarButton text={'Contact'} />
+                        <NavBarButton text={'Work Experience'} pageId={'workExperiencePage'} />
+                        <NavBarButton text={'Certificate'} pageId={'certificatePage'}/>
+                        <NavBarButton text={'Project'} pageId={'projectPage'}/>
+                        <NavBarButton text={'Contact'} pageId={'contactPage'} />
                         <div className="scale-60">
                             <SwitcherThemeMode />
                         </div>
@@ -27,10 +28,10 @@ export default function AboutMePage() {
                 <div className="grow flex flex-row text-white gap-8">
                     <div className="flex-1 flex flex-col gap-4">
                         <div className="flex-1">
-                            <p className="text-5xl leading-18 mb-2">Zulvan Fahmi</p>
-                            <p className="text-2xl mb-1">Fullstack Software Developer</p>
-                            <p className="text-sm text-blue-100">Lorem ipsum dolor, sit amet consectetur</p>
-                            <p className="text-sm text-blue-100">adipisicing elit. Sint, ipsum.</p>
+                            <p className="text-5xl leading-18">Zulvan Fahmi</p>
+                            <p className="text-2xl">Fullstack Software Developer</p>
+                            {/* <p className="text-sm">Lorem ipsum dolor, sit amet consectetur</p>
+                            <p className="text-sm">adipisicing elit. Sint, ipsum.</p> */}
                         </div>
                         <div className="flex-1">
                             <p className="mb-2">Key Skills:</p>

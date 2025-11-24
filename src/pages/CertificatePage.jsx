@@ -9,8 +9,8 @@ export default function CertificatePage() {
 
     return (
         <>
-            <div>
-                <h1 className="text-white text-4xl mb-6 flex justify-center">Certificate</h1>
+            <div id="certificatePage">
+                <h1 className="text-white text-4xl my-10 flex justify-center">Certificate</h1>
                 <InfiniteScrollCarousel isReverse={'false'} certificateList={certificateList_2} />
                 <div className="mb-6"></div>
                 <InfiniteScrollCarousel isReverse={'true'} certificateList={certificateList_1} />

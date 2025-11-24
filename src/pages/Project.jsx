@@ -2,11 +2,15 @@ import { useEffect, useState } from "react";
 import ProjectCard from "../components/ui/ProjectCard";
 import BadgeIconText from "../components/ui/BadgeIconText";
 import { FaLaptop, FaMobileAlt, FaServer } from "react-icons/fa";
+import { projectListData } from "../data/Data";
+import { RiApps2Line } from "react-icons/ri";
 
 export default function Project() {
 
     const [isOpen, setIsOpen] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
+
+    const projectList = projectListData;
 
     function openModal() {
         setIsOpen(true);
@@ -28,20 +32,22 @@ export default function Project() {
 
     return (
         <>
-            <div className="flex flex-col">
-                <div>
-                    <h1 className="text-white text-4xl mb-6">Project!</h1>
+            <div id="projectPage" className="flex flex-col mt-12">
+                <div className="self-center">
+                    <h1 className="text-white text-4xl mb-8 mt-4">Project</h1>
                 </div>
                 <div className="flex flex-row text-white flex-wrap gap-4 justify-center mb-8">
+                    <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5 dark:hover:bg-white/90'} text={'All Projects'} iconComponent={<RiApps2Line />} />
                     <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5 dark:hover:bg-white/90'} text={'Backend'} iconComponent={<FaServer />} />
                     <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5 dark:hover:bg-white/90'} text={'Web'} iconComponent={<FaLaptop />} />
                     <BadgeIconText otherClass={'backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl cursor-pointer hover:bg-white/15 hover:-translate-y-0.5 transition active:translate-y-0.5 dark:hover:bg-white/90'} text={'Mobile'} iconComponent={<FaMobileAlt />} />
                 </div>
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-12">
-                    <ProjectCard handleClickCard={openModal} />
-                    <ProjectCard handleClickCard={openModal} />
-                    <ProjectCard handleClickCard={openModal} />
-                    <ProjectCard handleClickCard={openModal} />
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-8">
+                    {
+                        projectList.map((project) => (
+                            <ProjectCard key={project.id} handleClickCard={() => openModal(project.id)} {...project} />
+                        ))
+                    }
                 </div>
             </div>
 

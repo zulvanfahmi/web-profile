@@ -6,16 +6,16 @@ export default function WorkExperiencePage() {
 
     return (
         <>
-            <div className="max-w-2xl self-center w-full text-white">
-                <h1 className="text-white text-4xl mb-6 flex justify-center">Work Experience</h1>
+            <div id="workExperiencePage" className="max-w-2xl my-10 self-center w-full text-white">
+                <h1 className="text-white text-4xl mb-6 py-4 flex justify-center">Work Experience</h1>
 
                 <div className="flex flex-col gap-4 mb-6">
 
                     {workExperienceList.map((workExperience, index) => (
 
-                        <div key={index} className="group flex flex-row gap-8 rounded-2xl p-4 backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl">
+                        <div key={index} className="group flex flex-row gap-2 rounded-2xl p-4 backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl">
 
-                            <p className="text-sm pt-1 whitespace-nowrap">{workExperience.startEndDate}</p>
+                            <p className="text-sm pt-1 whitespace-nowrap min-w-1/3">{workExperience.startEndDate}</p>
 
                             <div className="flex flex-col">
                                 <p className="text-lg font-bold mb-3"><span className="relative inline-block after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-600 group-hover:after:scale-x-100">{workExperience.title}</span></p>

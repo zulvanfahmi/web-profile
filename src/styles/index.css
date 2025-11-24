@@ -29,6 +29,10 @@
 
 /* INTER FONT — OFFLINE — END */
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* SET DEFAULT FONT */
 html,
 body {
