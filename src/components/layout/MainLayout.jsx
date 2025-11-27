@@ -6,7 +6,7 @@ import { FaArrowUp } from 'react-icons/fa';
 import CertificatePage from '../../pages/CertificatePage';
 import WorkExperiencePage from '../../pages/WorkExperiencePage';
 import AboutMePage from '../../pages/AboutMePage';
-import { useEffectOnce } from 'react-use';
+import { useEffectOnce, useLocalStorage } from 'react-use';
 import SwitcherThemeMode from '../ui/SwitcherThemeMode';
 import { IoIosArrowUp } from 'react-icons/io';
 import { IconContext } from 'react-icons';
@@ -102,11 +102,39 @@ export default function MainLayout() {
         };
     });
 
+    // toggle theme
+    const [theme, setTheme] = useLocalStorage('theme', '');
+
+    useEffectOnce(() => {
+        if (theme === '') {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            setTheme(prefersDark ? 'dark' : 'light');
+        }
+    });
+
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [theme]);
+
+    function toggleTheme() {
+        if (theme === 'dark') {
+            setTheme('light')
+        } else {
+            setTheme('dark')
+        }
+    }
+
+    const switcherTheme = (<SwitcherThemeMode theme={theme} toggleTheme={toggleTheme} />)
+
     return (
         <div className='selection:bg-fuchsia-300 selection:text-fuchsia-900'>
 
             <div className='sm:mx-24 m-4 flex flex-col'>
-                <AboutMePage pageSections={pageSections} idPage={pageSections[0].idPage} />
+                <AboutMePage otherComponent={switcherTheme} pageSections={pageSections} idPage={pageSections[0].idPage} />
                 <WorkExperiencePage idPage={pageSections[1].idPage} />
                 <div className='mb-4 sm:mb-10' />
                 <CertificatePage idPage={pageSections[2].idPage} />
@@ -142,7 +170,7 @@ export default function MainLayout() {
                             </ IconContext.Provider >
                         </button>
                         <div className='scale-70'>
-                            <SwitcherThemeMode />
+                            {(switcherTheme)}
                         </div>
                     </div>
                 </div>

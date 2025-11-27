@@ -4,7 +4,7 @@ import SwitcherThemeMode from "../components/ui/SwitcherThemeMode";
 import BadgeIconText from "../components/ui/BadgeIconText"
 import { keySkillListData } from "../data/Data";
 
-export default function AboutMePage({idPage, pageSections}) {
+export default function AboutMePage({otherComponent, idPage, pageSections}) {
 
     const keySkillList = keySkillListData;
 
@@ -21,7 +21,7 @@ export default function AboutMePage({idPage, pageSections}) {
                         <NavBarButton text={'Project'} pageId={pageSections[3].idPage} />
                         <NavBarButton text={'Contact'} pageId={pageSections[4].idPage} />
                         <div className="scale-60">
-                            <SwitcherThemeMode />
+                            {(otherComponent)}
                         </div>
                     </div>
                 </div>

@@ -1,38 +1,11 @@
-import { useEffect} from 'react';
-import { useEffectOnce, useLocalStorage } from 'react-use';
 import styled from 'styled-components';
 
-export default function SwitcherThemeMode() {
-
-  const [theme, setTheme] = useLocalStorage('theme', '');
-
-  useEffectOnce(() => {
-    if (theme === '') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(prefersDark ? 'dark' : 'light');
-    }
-  });
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [theme]);
-
-  function handleChange() {
-    if (theme === 'dark') {
-      setTheme('light')
-    } else {
-      setTheme('dark')
-    }
-  }
+export default function SwitcherThemeMode({theme, toggleTheme}) {
 
   return (
     <StyledWrapper>
       <label className="switch">
-        <input id="input" type="checkbox" checked={theme==='dark' ? true : false} onChange={() => handleChange()}/>
+        <input id="input" type="checkbox" checked={theme==='dark' ? true : false} onChange={toggleTheme}/>
         <div className="slider round">
           <div className="sun-moon">
             <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">
