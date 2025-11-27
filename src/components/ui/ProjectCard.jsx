@@ -5,7 +5,7 @@ export default function ProjectCard({ handleClickCard, title, imageLink, techSta
     return (
         <>
             <div
-                className="rounded-lg backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl p-4 text-white inline-flex flex-col w-76 cursor-pointer hover:scale-103 hover:bg-white/15 transition" onClick={handleClickCard}>
+                className="rounded-lg backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl p-4 text-white inline-flex flex-col w-full sm:w-76 cursor-pointer hover:scale-103 hover:bg-white/15 transition" onClick={handleClickCard}>
 
                 <img className="w-full h-48 object-cover" src={imageLink} alt={`${title} image`} />
 

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default function ButtonSendEmail({handleClick}) {
   return (
     <StyledWrapper>
-      <button onClick={handleClick}>
+      <button className='hover:outline hover:outline-blue-400 backdrop-blur-lg dark:bg-gray-500 bg-blue-500/40 hover:bg-blue-600' onClick={handleClick}>
         <div className="svg-wrapper-1">
           <div className="svg-wrapper">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={16} height={16}>
@@ -23,7 +23,6 @@ const StyledWrapper = styled.div`
   button {
     font-family: inherit;
     font-size: 16px;
-    background: royalblue;
     color: white;
     padding: 0.4em 0.8em;
     padding-left: 0.7em;

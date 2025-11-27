@@ -33,6 +33,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hide scrollbar but allow scrolling */
+.custom-scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.custom-scrollbar-hide {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* SET DEFAULT FONT */
 html,
 body {

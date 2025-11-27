@@ -1,19 +1,19 @@
 import { workExperienceListData } from "../data/Data"
 
-export default function WorkExperiencePage() {
+export default function WorkExperiencePage({idPage}) {
 
     const workExperienceList = workExperienceListData;
 
     return (
         <>
-            <div id="workExperiencePage" className="max-w-2xl my-10 self-center w-full text-white">
-                <h1 className="text-white text-4xl mb-6 py-4 flex justify-center">Work Experience</h1>
+            <div id={idPage} className="max-w-2xl sm:my-10 self-center w-full text-white">
+                <h1 className="text-white text-2xl sm:text-4xl sm:mb-6 py-4 flex justify-baseline sm:justify-center">Work Experience</h1>
 
                 <div className="flex flex-col gap-4 mb-6">
 
                     {workExperienceList.map((workExperience, index) => (
 
-                        <div key={index} className="group flex flex-row gap-2 rounded-2xl p-4 backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl">
+                        <div key={index} className="group flex flex-col sm:flex-row gap-2 rounded-2xl p-4 backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl">
 
                             <p className="text-sm pt-1 whitespace-nowrap min-w-1/3">{workExperience.startEndDate}</p>
 

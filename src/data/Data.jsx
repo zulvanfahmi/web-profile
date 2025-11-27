@@ -97,6 +97,7 @@ export const projectListData = [
         id:1,
         title: 'project 1',
         imageLink: '/images/project/dummyimage.webp',
+        category: ['mobile', 'backend', 'web'],
         techStacks: [
             {
                 text: 'TailwindCSS',
@@ -110,12 +111,16 @@ export const projectListData = [
                 text: 'Apache Kafka',
                 iconComponent: <SiApachekafka />
             },
-        ]
+        ],
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit consequuntur sint unde, natus et obcaecati doloremque hic doloribus. Quaerat, est ut? Sunt ipsum, illo a veniam hic assumenda reiciendis vitae! Eum, nulla aspernatur. Aliquam velit consequatur tempore doloribus voluptatum neque ad enim. Repudiandae voluptas eos itaque omnis sunt fugit accusantium.',
+        documentationLink: 'linkedin.com',
+        codeLink: 'github.com',
     },
     {
         id:2,
         title: 'project 2',
         imageLink: '/images/project/project2.webp',
+        category: ['mobile', 'backend'],
         techStacks: [
             {
                 text: 'Spring Boot',
@@ -125,12 +130,16 @@ export const projectListData = [
                 text: 'Apache Kafka',
                 iconComponent: <SiApachekafka />
             },
-        ]
+        ],
+        description: ' consequatur tempore doloribus voluptatum neque ad enim. Repudiandae voluptas eos itaque omnis sunt fugit accusantium.',
+        documentationLink: '',
+        codeLink: 'github.com',
     },
     {
         id:3,
         title: 'project 3',
         imageLink: '/images/project/project3.webp',
+        category: ['mobile', 'web'],
         techStacks: [
             {
                 text: 'TailwindCSS',
@@ -144,12 +153,16 @@ export const projectListData = [
                 text: 'Apache Kafka',
                 iconComponent: <SiApachekafka />
             },
-        ]
+        ],
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit consequuntur sint unde, natus et obcaecati doloremque hic doloribus. Quaerat, est ut? Sunt ipsum, illo a veniam hic assumenda reiciendis vitae! Eum, nulla aspernatur. Aliquam vel.',
+        documentationLink: 'linkedin.com',
+        codeLink: '',
     },
     {
         id:4,
         title: 'project 4',
         imageLink: '/images/project/project4.webp',
+        category: ['mobile'],
         techStacks: [
             {
                 text: 'TailwindCSS',
@@ -163,12 +176,16 @@ export const projectListData = [
                 text: 'Apache Kafka',
                 iconComponent: <SiApachekafka />
             },
-        ]
+        ],
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit consequuntur sint unde, natus et obcaecati doloremque hic doloribus. Quaerat, est ut? Sunt ipsum, illo a veniam hic assumenda reiciendis vitae! Eum, nulla aspernatur. Aliquam velit consequatur tempore doloribus voluptatum neque ad enim. Repudiandae voluptas eos itaque omnis sunt fugit accusantium.',
+        documentationLink: '',
+        codeLink: '',
     },
     {
         id:5,
         title: 'project 5',
         imageLink: '/images/project/project5.jpg',
+        category: ['backend', 'web'],
         techStacks: [
             {
                 text: 'TailwindCSS',
@@ -182,6 +199,6 @@ export const projectListData = [
                 text: 'Apache Kafka',
                 iconComponent: <SiApachekafka />
             },
-        ]
+        ],
     },
 ]
