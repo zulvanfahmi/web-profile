@@ -1,6 +1,7 @@
 import { FaBootstrap, FaDocker, FaGithub, FaJava } from "react-icons/fa";
-import { SiApachekafka, SiJavascript, SiMongodb, SiMysql, SiRedis, SiSpringboot, SiTailwindcss } from "react-icons/si";
+import { SiApachekafka, SiExpo, SiJavascript, SiMongodb, SiMysql, SiRedis, SiSpringboot, SiTailwindcss, SiVite } from "react-icons/si";
 import { BiLogoPostgresql, BiLogoSpringBoot } from "react-icons/bi";
+import { FaReact } from "react-icons/fa6";
 
 export const certificateList1 = [
     {
@@ -57,6 +58,10 @@ export const keySkillListData = [
     { text: 'Java', iconComponent: <FaJava /> },
     { text: 'Spring Boot', iconComponent: <BiLogoSpringBoot /> },
     { text: 'Java Script', iconComponent: <SiJavascript /> },
+    { text: 'ReactJS', iconComponent: <FaReact /> },
+    { text: 'Vite', iconComponent: <SiVite /> },
+    { text: 'React Native', iconComponent: <FaReact /> },
+    { text: 'Expo', iconComponent: <SiExpo /> },
     { text: 'TailwindCSS', iconComponent: <SiTailwindcss /> },
     { text: 'Bootstrap', iconComponent: <FaBootstrap /> },
     { text: 'MySQL', iconComponent: <SiMysql /> },

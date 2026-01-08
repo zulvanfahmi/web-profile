@@ -13,7 +13,7 @@ import { IconContext } from 'react-icons';
 
 export default function MainLayout() {
 
-    // back to top fetaure
+    // back to top feature
     const [visible, setVisible] = useState(false);
     const SCROLL_THRESHOLD = 500;
 
@@ -177,7 +177,7 @@ export default function MainLayout() {
             </div>
 
             <div className='bg-sky-900 dark:bg-zinc-800 flex justify-center'>
-                <p className='pb-4 pt-2 sm:py-4 text-sm text-white text-center leading-6'>© 2025 Zulvan Fahmi &bull; Turning ideas into glowing little creations 🌌✨</p>
+                <p className='pb-4 pt-2 sm:py-4 text-sm text-white text-center leading-6'>©2025 Zulvan Fahmi &bull; Turning ideas into glowing little creations 🌌✨</p>
             </div>
 
             <div className={`fixed bottom-2.5 right-5 ${visible ? 'hidden sm:block' : 'hidden'}`}>
