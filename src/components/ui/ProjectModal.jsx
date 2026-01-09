@@ -10,7 +10,7 @@ export default function ProjectModal({ projectData, isAnimating, closeModal }) {
 
                 <div className={`p-4 sm:p-6 rounded-2xl w-7/8 max-h-3/4 sm:w-2/4 sm:max-h-2/3 transition-all duration-300 ${isAnimating ? "opacity-100 scale-100" : "opacity-0 scale-95"} backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl text-white flex flex-col`}>
 
-                    <div className="pb-2 sticky top-0 z-10 flex justify-between items-center border-b">
+                    <div className="pb-2 sticky top-0 z-10 flex justify-between items-start border-b">
                         <h2 className="text-3xl font-bold">{projectData.title}</h2>
                         <button
                             onClick={closeModal}
@@ -53,7 +53,7 @@ export default function ProjectModal({ projectData, isAnimating, closeModal }) {
                         </div>
 
                         <div className="flex flex-col items-center gap-y-4">
-                            <img className="rounded w-76 h-48 object-cover" src={projectData.imageLink} alt={projectData.title} />
+                            <img className="rounded max-w-76 max-h-48 object-contain" src={projectData.imageLink} alt={projectData.title} />
 
                             <div className="flex flex-row flex-wrap gap-2 justify-center">
 
@@ -66,7 +66,7 @@ export default function ProjectModal({ projectData, isAnimating, closeModal }) {
                             </div>
                         </div>
 
-                        <p className="text-sm leading-6 text-justify">{projectData.description}</p>
+                        <p className="text-sm leading-6 text-justify whitespace-pre-line">{projectData.description}</p>
 
                     </div>
 

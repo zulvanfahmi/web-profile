@@ -99,111 +99,74 @@ export const workExperienceListData = [
 
 export const projectListData = [
     {
-        id:1,
-        title: 'project 1',
-        imageLink: '/images/project/dummyimage.webp',
-        category: ['mobile', 'backend', 'web'],
-        techStacks: [
-            {
-                text: 'TailwindCSS',
-                iconComponent: <SiTailwindcss />
-            },
-            {
-                text: 'Spring Boot',
-                iconComponent: <SiSpringboot />
-            },
-            {
-                text: 'Apache Kafka',
-                iconComponent: <SiApachekafka />
-            },
-        ],
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit consequuntur sint unde, natus et obcaecati doloremque hic doloribus. Quaerat, est ut? Sunt ipsum, illo a veniam hic assumenda reiciendis vitae! Eum, nulla aspernatur. Aliquam velit consequatur tempore doloribus voluptatum neque ad enim. Repudiandae voluptas eos itaque omnis sunt fugit accusantium.',
-        documentationLink: 'linkedin.com',
-        codeLink: 'github.com',
-    },
-    {
-        id:2,
-        title: 'project 2',
-        imageLink: '/images/project/project2.webp',
-        category: ['mobile', 'backend'],
-        techStacks: [
-            {
-                text: 'Spring Boot',
-                iconComponent: <SiSpringboot />
-            },
-            {
-                text: 'Apache Kafka',
-                iconComponent: <SiApachekafka />
-            },
-        ],
-        description: ' consequatur tempore doloribus voluptatum neque ad enim. Repudiandae voluptas eos itaque omnis sunt fugit accusantium.',
-        documentationLink: '',
-        codeLink: 'github.com',
-    },
-    {
-        id:3,
-        title: 'project 3',
-        imageLink: '/images/project/project3.webp',
-        category: ['mobile', 'web'],
-        techStacks: [
-            {
-                text: 'TailwindCSS',
-                iconComponent: <SiTailwindcss />
-            },
-            {
-                text: 'Spring Boot',
-                iconComponent: <SiSpringboot />
-            },
-            {
-                text: 'Apache Kafka',
-                iconComponent: <SiApachekafka />
-            },
-        ],
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit consequuntur sint unde, natus et obcaecati doloremque hic doloribus. Quaerat, est ut? Sunt ipsum, illo a veniam hic assumenda reiciendis vitae! Eum, nulla aspernatur. Aliquam vel.',
-        documentationLink: 'linkedin.com',
-        codeLink: '',
-    },
-    {
-        id:4,
-        title: 'project 4',
-        imageLink: '/images/project/project4.webp',
-        category: ['mobile'],
-        techStacks: [
-            {
-                text: 'TailwindCSS',
-                iconComponent: <SiTailwindcss />
-            },
-            {
-                text: 'Spring Boot',
-                iconComponent: <SiSpringboot />
-            },
-            {
-                text: 'Apache Kafka',
-                iconComponent: <SiApachekafka />
-            },
-        ],
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit consequuntur sint unde, natus et obcaecati doloremque hic doloribus. Quaerat, est ut? Sunt ipsum, illo a veniam hic assumenda reiciendis vitae! Eum, nulla aspernatur. Aliquam velit consequatur tempore doloribus voluptatum neque ad enim. Repudiandae voluptas eos itaque omnis sunt fugit accusantium.',
-        documentationLink: '',
-        codeLink: '',
-    },
-    {
-        id:5,
-        title: 'project 5',
-        imageLink: '/images/project/project5.jpg',
+        id: 1,
+        title: 'URL Shortener and QR Code Generator (bit.ly Clone)',
+        imageLink: '/images/project/urlshortenerandqrcodegenerator.webp',
         category: ['backend', 'web'],
         techStacks: [
-            {
-                text: 'TailwindCSS',
-                iconComponent: <SiTailwindcss />
-            },
-            {
-                text: 'Spring Boot',
-                iconComponent: <SiSpringboot />
-            },
-            {
-                text: 'Apache Kafka',
-                iconComponent: <SiApachekafka />
-            },
+            { text: 'ReactJS', iconComponent: <FaReact /> },
+            { text: 'Spring Boot', iconComponent: <SiSpringboot /> },
+            { text: 'TailwindCSS', iconComponent: <SiTailwindcss /> },
+            { text: 'MongoDB', iconComponent: <SiMongodb /> },
         ],
+        description:
+            `
+        A web-based 🔗URL Shortener & 🔳QR Code Generator that allows users to convert long URLs into short, shareable links and generate QR codes in real time.
+        The application supports both Indonesian 🇮🇩 and English 🇺🇸, ensuring a more accessible and user-friendly experience for a wider audience.
+        
+        ✨ Features:
+        - 🔗 URL Shortening
+        - 📱 QR Code Generation
+        - 💾 Convert QR Codes to Downloadable Image Files
+        - 🌐 Multi-language Support (English & Indonesian)
+        `,
+        documentationLink: 'linkedin.com',
+        codeLink: 'https://github.com/zulvanfahmi/url-shortener-frontend',
+    },
+    {
+        id: 2,
+        title: 'Web Profile and Portofolio',
+        imageLink: '/images/project/webprofileandportofolio.webp',
+        category: ['web'],
+        techStacks: [
+            { text: 'ReactJS', iconComponent: <FaReact /> },
+            { text: 'TailwindCSS', iconComponent: <SiTailwindcss /> },
+            { text: 'Vite', iconComponent: <SiVite /> },
+        ],
+        description: `
+        🌐 A personal profile and portfolio website designed to showcase my professional background, technical skills, and selected projects in a clean and responsive interface for both desktop 🖥️ and mobile 📱 devices.
+
+        The website supports light and dark themes 🌗, includes an email contact feature ✉️, project filtering by category 🏷️, and an infinite carousel ♾️ to present content in an engaging and interactive way.
+        `,
+        documentationLink: '',
+        codeLink: 'https://github.com/zulvanfahmi/web-profile',
+    },
+    {
+        id: 3,
+        title: 'Weather App',
+        imageLink: '/images/project/weatherapp.webp',
+        category: ['mobile'],
+        techStacks: [
+            { text: 'React Native', iconComponent: <FaReact /> },
+            { text: 'Expo', iconComponent: <SiExpo /> },
+            { text: 'TailwindCSS', iconComponent: <SiTailwindcss /> },
+        ],
+        description: `
+        🌦️ A mobile weather application designed to deliver real-time weather updates and forecasts ⏱️ based on selected locations 📍.
+        
+        The application features a clean and responsive mobile interface 📱, supports location-based weather detection 🛰️, and presents weather information in a simple and easy-to-understand format 🌡️.
+        
+        ✨ Features :
+        - 📍 Real-time weather forecast based on the user’s current location
+        - 🔍 Search weather by city
+        - 🌡️ Display detailed weather data, including temperature, humidity, wind speed, visibility, and more
+        - 📅 5-day weather forecast
+        - 📊 Temperature visualization for the 5-day forecast
+        - 🌍 Multiple measurement units support (Celsius, Kelvin, Fahrenheit)
+        - 🌐 Multi-language support (Indonesian 🇮🇩 and English 🇺🇸)
+        - ⏰ 12-hour and 24-hour time format support
+        `,
+        documentationLink: 'linkedin.com',
+        codeLink: '',
     },
 ]
