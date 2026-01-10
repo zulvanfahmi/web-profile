@@ -8,7 +8,7 @@ export default function ProjectModal({ projectData, isAnimating, closeModal }) {
         <>
             <div onClick={closeModal} className={`fixed inset-0 bg-black/70 flex items-center justify-center z-50 transition-opacity duration-300 ${isAnimating ? "opacity-100" : "opacity-0"}`}>
 
-                <div className={`p-4 sm:p-6 rounded-2xl w-7/8 max-h-3/4 sm:w-2/4 sm:max-h-2/3 transition-all duration-300 ${isAnimating ? "opacity-100 scale-100" : "opacity-0 scale-95"} backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl text-white flex flex-col`}>
+                <div onClick={(e) => e.stopPropagation()} className={`p-4 sm:p-6 rounded-2xl w-7/8 max-h-3/4 sm:w-2/4 sm:max-h-2/3 transition-all duration-300 ${isAnimating ? "opacity-100 scale-100" : "opacity-0 scale-95"} backdrop-blur-lg bg-white/10 border border-white/20 shadow-xl text-white flex flex-col`}>
 
                     <div className="pb-2 sticky top-0 z-10 flex justify-between items-start border-b">
                         <h2 className="text-3xl font-bold">{projectData.title}</h2>

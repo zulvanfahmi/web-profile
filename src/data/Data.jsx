@@ -1,5 +1,5 @@
 import { FaBootstrap, FaDocker, FaGithub, FaJava } from "react-icons/fa";
-import { SiApachekafka, SiExpo, SiJavascript, SiMongodb, SiMysql, SiRedis, SiSpringboot, SiTailwindcss, SiVite } from "react-icons/si";
+import { SiApachekafka, SiExpo, SiJavascript, SiMongodb, SiMysql, SiRedis, SiSpringboot, SiTailwindcss, SiThymeleaf, SiVite } from "react-icons/si";
 import { BiLogoPostgresql, BiLogoSpringBoot } from "react-icons/bi";
 import { FaReact } from "react-icons/fa6";
 
@@ -166,7 +166,42 @@ export const projectListData = [
         - 🌐 Multi-language support (Indonesian 🇮🇩 and English 🇺🇸)
         - ⏰ 12-hour and 24-hour time format support
         `,
-        documentationLink: 'linkedin.com',
-        codeLink: '',
+        documentationLink: '',
+        codeLink: 'https://github.com/zulvanfahmi/weather-app',
+    },
+    {
+        id: 4,
+        title: 'Medical.id',
+        imageLink: '/images/project/medicalid.webp',
+        category: ['backend', 'web'],
+        techStacks: [
+            { text: 'Spring Boot', iconComponent: <BiLogoSpringBoot /> },
+            { text: 'Thymeleaf', iconComponent: <SiThymeleaf /> },
+            { text: 'Bootstrap', iconComponent: <FaBootstrap /> },
+        ],
+        description: `
+        🏥 A web-based Hospital Management System designed to streamline hospital operations and manage patient data through an integrated and centralized platform.
+
+        📘 Project Background
+        This web application was developed and completed during training at XSIS Academy as part of the Final Assessment Project for the Junior Java Developer program.
+
+        ✨ The application provides the following key features:
+        - 🔐 User Authentication (Login)
+        Secure login functionality to ensure that only authorized users can access the system.
+        - 💊 Medicine Search
+        Allows users to search for medicines and view relevant information quickly and efficiently.
+        - 👨‍⚕️ Doctor Search
+        Enables users to search for doctors based on name, specialization, or availability.
+        - 📋 Doctor Directory
+        Displays a complete list of available doctors along with their details and schedules.
+        - 🏥 Hospital Directory
+        Provides a list of registered hospitals with relevant information for users.
+        - 📅 Doctor Appointment Scheduling
+        Allows users to create and manage appointments with doctors through an easy-to-use scheduling system.
+        - ⚙️ Hospital Administration Management
+        Enables administrators to manage hospital data, including hospital registration and hospital address information.
+        `,
+        documentationLink: '',
+        codeLink: 'https://github.com/zulvanfahmi/web-medical.id',
     },
 ]
