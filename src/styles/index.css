@@ -64,8 +64,8 @@ body {
         #1f4068,
         #1b7f8c,
         #533483);
-    background-size: 400% 400%;
-    animation: gradientAnimation 20s ease infinite;
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
     will-change: background-position;
   }
 
@@ -90,8 +90,8 @@ body {
         #000000
         /* Hitam Murni */
       );
-    background-size: 400% 400%;
-    animation: gradientAnimation 20s ease infinite;
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
     will-change: background-position;
   }
 
