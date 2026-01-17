@@ -1,9 +1,13 @@
-export default function NavbarButton({ text, pageId }) {
+export default function NavbarButton({ text, pageId, lenis }) {
   return (
-    <>
-      <a
-        href={`#${pageId}`}
-        className="
+    <button
+      onClick={() =>
+        lenis?.scrollTo(`#${pageId}`, {
+          duration: 2.2,
+          easing: (t) => 1 - Math.pow(1 - t, 4),
+        })
+      }
+      className="
           text-base 
           uppercase 
           text-white
@@ -12,9 +16,10 @@ export default function NavbarButton({ text, pageId }) {
           hover:bg-white/10 hover:backdrop-blur-lg hover:rounded-lg 
           hover:border-white/20 hover:shadow-xl hover:-translate-y-0.5
           active:translate-y-0.5
-        ">
-        {text}
-      </a>
-    </>
-  );
+        "
+    >
+      {text}
+    </button>
+  )
 }
+

@@ -1,10 +1,9 @@
 import NavBarButton from "../components/ui/NavbarButton";
 import NeonLampFire from "../components/animations/NeonLampFire";
-import SwitcherThemeMode from "../components/ui/SwitcherThemeMode";
 import BadgeIconText from "../components/ui/BadgeIconText"
 import { keySkillListData } from "../data/Data";
 
-export default function AboutMePage({otherComponent, idPage, pageSections}) {
+export default function AboutMePage({otherComponent, idPage, pageSections, lenis}) {
 
     const keySkillList = keySkillListData;
 
@@ -16,10 +15,10 @@ export default function AboutMePage({otherComponent, idPage, pageSections}) {
                         <NeonLampFire />
                     </div>
                     <div className="flex flex-row items-center gap-4">
-                        <NavBarButton text={'Work Experience'} pageId={pageSections[1].idPage} />
-                        <NavBarButton text={'Certificate'} pageId={pageSections[2].idPage} />
-                        <NavBarButton text={'Project'} pageId={pageSections[3].idPage} />
-                        <NavBarButton text={'Contact'} pageId={pageSections[4].idPage} />
+                        <NavBarButton text={'Work Experience'} pageId={pageSections[1].idPage} lenis={lenis} />
+                        <NavBarButton text={'Certificate'} pageId={pageSections[2].idPage} lenis={lenis} />
+                        <NavBarButton text={'Project'} pageId={pageSections[3].idPage} lenis={lenis} />
+                        <NavBarButton text={'Contact'} pageId={pageSections[4].idPage} lenis={lenis} />
                         <div className="scale-60">
                             {(otherComponent)}
                         </div>
@@ -31,7 +30,7 @@ export default function AboutMePage({otherComponent, idPage, pageSections}) {
                             <p className="text-5xl leading-18">Zulvan Fahmi</p>
                             <p className="text-2xl">Fullstack Software Developer</p>
                         </div>
-                        <div className="sm:flex-1">
+                        <div className="sm:flex-1 my-4">
                             <p className="mb-2">Key Skills:</p>
                             <div className="flex flex-row flex-wrap gap-1 justify-center">
                                 {keySkillList.map((keySkill, index) => (

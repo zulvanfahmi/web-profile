@@ -30,7 +30,7 @@
 /* INTER FONT — OFFLINE — END */
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 /* Hide scrollbar but allow scrolling */
