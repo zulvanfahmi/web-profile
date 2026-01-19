@@ -2,8 +2,8 @@ export default function NavbarButton({ text, pageId, lenis }) {
   return (
     <button
       onClick={() =>
-        lenis?.scrollTo(`#${pageId}`, {
-          duration: 2.2,
+        lenis?.current?.scrollTo(`#${pageId}`, {
+          duration: 1.5,
           easing: (t) => 1 - Math.pow(1 - t, 4),
         })
       }
@@ -20,6 +20,5 @@ export default function NavbarButton({ text, pageId, lenis }) {
     >
       {text}
     </button>
-  )
+  );
 }
-

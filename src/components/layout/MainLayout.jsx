@@ -160,13 +160,13 @@ export default function MainLayout() {
           otherComponent={switcherTheme}
           pageSections={pageSections}
           idPage={pageSections[0].idPage}
-          lenis={lenisRef.current}
+          lenis={lenisRef}
         />
         <WorkExperiencePage idPage={pageSections[1].idPage} />
-        <div className="mb-10 sm:mb-40" />
+        <div className="mb-4" />
         <CertificatePage idPage={pageSections[2].idPage} />
         <div className="mb-20" />
-        <Project idPage={pageSections[3].idPage} />
+        <Project idPage={pageSections[3].idPage} lenis={lenisRef} />
         <div className="mb-20" />
         <Contact idPage={pageSections[4].idPage} />
       </div>

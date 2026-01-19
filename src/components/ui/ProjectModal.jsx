@@ -19,7 +19,7 @@ export default function ProjectModal({ projectData, isAnimating, closeModal }) {
                         </button>
                     </div>
 
-                    <div className="pt-2 overflow-y-auto scroll-smooth custom-scrollbar-hide grow flex flex-col gap-y-6 sm:gap-y-2">
+                    <div data-lenis-prevent className="pt-2 overflow-y-auto scroll-smooth custom-scrollbar-hide grow flex flex-col gap-y-6 sm:gap-y-2">
 
                         <div className="flex flex-row items-center sm:gap-x-8">
 

@@ -120,7 +120,7 @@ export const projectListData = [
         - 💾 Convert QR Codes to Downloadable Image Files
         - 🌐 Multi-language Support (English & Indonesian)
         `,
-        documentationLink: 'linkedin.com',
+        documentationLink: '',
         codeLink: 'https://github.com/zulvanfahmi/url-shortener-frontend',
     },
     {
