@@ -30,7 +30,7 @@ export default function WorkExperiencePage({idPage}) {
                 </div>
 
                 <h1 className="group text-white relative inline-block after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-600 hover:after:scale-x-100">
-                    <a href="https://drive.google.com/file/d/1htpLSLwtvtaYcEXMKYWutOlOmk2uF_Uj/view?usp=sharing" target="_blank">
+                    <a href="https://drive.google.com/drive/folders/1Zr0fjEMxd8mLXtH2-yMqj6vDFThyS8xH?usp=sharing" target="_blank">
                         View Full Résumé<i className="fa-solid fa-arrow-up text-xs ml-0.5 mb-1 rotate-45 transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1"></i>
                     </a>
                 </h1>
